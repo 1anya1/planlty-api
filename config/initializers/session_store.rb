@@ -1,7 +1,7 @@
 #config/initializers/session_store.rb
 if Rails.env === 'production' 
-    Rails.application.config.session_store :cookie_store, key: '_plantly_key', domain: 'plantly-app.netlify.app'
+    Rails.application.config.session_store :cookie_store, key: '_plantly_key', domain: 'plantly-app.netlify.app', httponly: false
   else
     
-    Rails.application.config.session_store :cookie_store, key: '_planty_key', domain: 'all', secure: true
+    Rails.application.config.session_store :cookie_store, key: '_planty_key', domain: 'all'
   end
