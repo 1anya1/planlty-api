@@ -14,8 +14,6 @@ Rails.application.configure do
   # Show full error reports.
   config.consider_all_requests_local = true
 
-  config.action_dispatch.cookies_same_site_protection = :none
-
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
   if Rails.root.join('tmp', 'caching-dev.txt').exist?
@@ -28,10 +26,6 @@ Rails.application.configure do
 
     config.cache_store = :null_store
   end
-  config.action_dispatch.default_headers.merge!(
-    'Cache-Control' => 'no-store, no-cache'
-  )
- 
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
