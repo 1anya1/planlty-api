@@ -26,7 +26,8 @@ module IntroAppApi
     config.load_defaults 6.1
     config.middleware.use ActionDispatch::Cookies    
     config.middleware.use ActionDispatch::Session::CookieStore
-  
+    config.action_dispatch.cookies_same_site_protection = :none
+    config.action_dispatch.cookies_secure = :true
    
 
     # Configuration for the application, engines, and railties goes here.
