@@ -82,5 +82,4 @@ test:
 production:
   <<: *default
   database: intro_app_api_production
-  username: intro_app_api
-  password: <%= ENV['INTRO_APP_API_DATABASE_PASSWORD'] %>
+ 
