@@ -26,10 +26,7 @@ module IntroAppApi
     config.load_defaults 6.1
     config.middleware.use ActionDispatch::Cookies    
     config.middleware.use ActionDispatch::Session::CookieStore
-    config.action_dispatch.default_headers.merge!(
-      'Cache-Control' => 'no-store, no-cache'
-    )
-   
+  
    
 
     # Configuration for the application, engines, and railties goes here.
