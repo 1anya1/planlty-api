@@ -153,7 +153,6 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    sqlite (1.0.2)
     thor (1.1.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
@@ -180,7 +179,6 @@ DEPENDENCIES
   rails_12factor
   rails_same_site_cookie (~> 0.1.8)
   spring
-  sqlite (~> 1.0.2)
   tzinfo-data
 
 RUBY VERSION

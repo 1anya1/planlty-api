@@ -81,5 +81,5 @@ test:
 #
 production:
   <<: *default
-   adapter: postgresql
-   database: db/production.sqlite3
+  adapter: postgresql
+  database: db/production.sqlite3
