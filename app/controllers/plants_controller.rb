@@ -5,7 +5,6 @@ class PlantsController < ApplicationController
     render json: @plants
   end
 
-  # GET /plants/1
   def show
     @plant = Plant.find(params[:id])
     @todo.todo_id = params[:todo_id]
