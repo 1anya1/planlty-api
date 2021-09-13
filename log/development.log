@@ -79025,3 +79025,772 @@ Started DELETE "/users/1/todos/" for ::1 at 2021-09-12 22:10:01 -0700
   
 ActionController::RoutingError (No route matches [DELETE] "/users/1/todos"):
   
+Started DELETE "/users/1/todos/" for ::1 at 2021-09-12 22:17:56 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/1/todos"):
+  
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6577983283399664955)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlants (20210913052610)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "plants" ("id" bigserial primary key, "water" boolean, "fertilize" boolean, "prune" boolean, "repot" boolean, "notes" character varying, "img" character varying, "date" date, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210913052610"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6577983283399664955)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6577983283399664955)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddForeignKeyToPlants (20210913052942)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(6577983283399664955)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6577983283399664955)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddForeignKeyToPlants (20210913052942)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.8ms)[0m  [1m[35mALTER TABLE "plants" ADD "todo_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210913052942"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6577983283399664955)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6577983283399664955)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddForeignKeyToPlants (20210913052942)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.6ms)[0m  [1m[35mALTER TABLE "plants" DROP COLUMN "todo_id"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.3ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210913052942"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6577983283399664955)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6577983283399664955)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlants (20210913052610)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP TABLE "plants"[0m
+  [1m[36mActiveRecord::SchemaMigration Destroy (0.5ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20210913052610"]]
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6577983283399664955)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6577983283399664955)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePlants (20210913052610)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.4ms)[0m  [1m[35mCREATE TABLE "plants" ("id" bigserial primary key, "water" boolean, "fertilize" boolean, "prune" boolean, "repot" boolean, "notes" character varying, "img" character varying, "date" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210913052610"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddForeignKeyToPlants (20210913052942)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "plants" ADD "todo_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210913052942"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6577983283399664955)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/todos" for ::1 at 2021-09-12 22:36:18 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/todos" for ::1 at 2021-09-12 22:36:40 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/todos" for ::1 at 2021-09-12 22:36:41 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/todos" for ::1 at 2021-09-12 22:36:43 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/users/1/" for ::1 at 2021-09-12 22:38:41 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (1.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 7.3ms | Allocations: 12862)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-12 22:38:49 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 880)
+
+
+Started GET "/users/1/todos.plants" for ::1 at 2021-09-12 22:38:55 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.2ms | Allocations: 696)
+
+
+Started GET "/users/1/todos/plants" for ::1 at 2021-09-12 22:38:59 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"plants"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 404 Not Found in 4ms (ActiveRecord: 1.4ms | Allocations: 849)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=plants):
+  
+app/controllers/todos_controller.rb:7:in `show'
+Started POST "/users/1/todos/?todo[title]=monstera&todo[url]=monstera%20url" for ::1 at 2021-09-12 22:39:44 -0700
+Processing by TodosController#create as */*
+  Parameters: {"todo"=>{"title"=>"monstera", "url"=>"monstera url"}, "user_id"=>"1"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:14:in `create'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "monstera"], ["url", "monstera url"], ["created_at", "2021-09-13 05:39:44.343153"], ["updated_at", "2021-09-13 05:39:44.343153"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:14:in `create'
+Completed 201 Created in 17ms (Views: 0.7ms | ActiveRecord: 3.2ms | Allocations: 6791)
+
+
+Started GET "/users/1/todos/" for ::1 at 2021-09-12 22:39:55 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 808)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:40:00 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1424)
+
+
+Started GET "/todos" for ::1 at 2021-09-12 22:40:23 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/todos" for ::1 at 2021-09-12 22:40:24 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/todos" for ::1 at 2021-09-12 22:40:28 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/users/1/plants" for ::1 at 2021-09-12 22:42:56 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/plants"):
+  
+Started GET "/users/1/plants" for ::1 at 2021-09-12 22:43:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/plants"):
+  
+Started GET "/todos" for ::1 at 2021-09-12 22:43:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/users/1/plants" for ::1 at 2021-09-12 22:43:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/plants"):
+  
+Started GET "/users/1/plants" for ::1 at 2021-09-12 22:43:37 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/plants"):
+  
+Started GET "/users/1/todos/1/plants" for ::1 at 2021-09-12 22:44:09 -0700
+Processing by PlantsController#index as */*
+  Parameters: {"user_id"=>"1", "todo_id"=>"1"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1276)
+
+
+  
+SyntaxError (/Users/annafilatova/Desktop/intro_app_api/app/models/plant.rb:2: syntax error, unexpected ':', expecting `end'
+    belogs_to : todo
+              ^
+):
+  
+app/models/plant.rb:2: syntax error, unexpected ':', expecting `end'
+app/models/plant.rb:2: syntax error, unexpected ':', expecting `end'
+app/controllers/plants_controller.rb:6:in `index'
+Started GET "/users/1/todos/1/plants" for ::1 at 2021-09-12 22:44:42 -0700
+Processing by PlantsController#index as */*
+  Parameters: {"user_id"=>"1", "todo_id"=>"1"}
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 4551)
+
+
+  
+NoMethodError (undefined method `belogs_to' for Plant:Class
+Did you mean?  belongs_to):
+  
+app/models/plant.rb:2:in `<class:Plant>'
+app/models/plant.rb:1:in `<main>'
+app/controllers/plants_controller.rb:6:in `index'
+Started GET "/users/1/todos/1/plants" for ::1 at 2021-09-12 22:45:06 -0700
+Processing by PlantsController#index as */*
+  Parameters: {"user_id"=>"1", "todo_id"=>"1"}
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:7:in `index'
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 2776)
+
+
+Started GET "/todos" for ::1 at 2021-09-12 22:47:07 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/todos" for ::1 at 2021-09-12 22:47:08 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/users/1/todos/1/plants" for ::1 at 2021-09-12 22:47:59 -0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PlantsController#index as */*
+  Parameters: {"user_id"=>"1", "todo_id"=>"1"}
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 2.0ms | ActiveRecord: 0.5ms | Allocations: 3732)
+
+
+Started GET "/todos" for ::1 at 2021-09-12 22:48:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/todos" for ::1 at 2021-09-12 22:48:05 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/todos"):
+  
+Started GET "/users/" for ::1 at 2021-09-12 22:48:43 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 15ms (Views: 7.2ms | ActiveRecord: 4.5ms | Allocations: 5743)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:48:45 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 2.7ms | Allocations: 9124)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:49:31 -0700
+  
+SyntaxError (/Users/annafilatova/Desktop/intro_app_api/app/controllers/users_controller.rb:22: syntax error, unexpected ')', expecting =>
+..._json(include: :todos, :plants)
+...                              ^
+):
+  
+app/controllers/users_controller.rb:22: syntax error, unexpected ')', expecting =>
+app/controllers/users_controller.rb:22: syntax error, unexpected ')', expecting =>
+Started GET "/users/1" for ::1 at 2021-09-12 22:49:44 -0700
+  
+SyntaxError (/Users/annafilatova/Desktop/intro_app_api/app/controllers/users_controller.rb:22: syntax error, unexpected ':', expecting ')'
+...@user.to_json(include: :todos :plants)
+...                              ^
+):
+  
+app/controllers/users_controller.rb:22: syntax error, unexpected ':', expecting ')'
+app/controllers/users_controller.rb:22: syntax error, unexpected ':', expecting ')'
+Started GET "/users" for ::1 at 2021-09-12 22:50:31 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 2.6ms | Allocations: 4937)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:50:34 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 2.6ms | Allocations: 5968)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-12 22:50:40 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 1023)
+
+
+Started GET "/users/1/todos/9" for ::1 at 2021-09-12 22:50:46 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"9"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 9]]
+  ↳ app/controllers/todos_controller.rb:9:in `show'
+Completed 200 OK in 12ms (Views: 1.3ms | ActiveRecord: 2.1ms | Allocations: 3317)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:52:57 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 25ms (Views: 0.2ms | ActiveRecord: 5.7ms | Allocations: 9842)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:53:02 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1406)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:54:32 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 22ms (Views: 0.3ms | ActiveRecord: 5.6ms | Allocations: 9821)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:54:42 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 6.3ms | Allocations: 15721)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:54:43 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 1541)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:55:21 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 35ms (Views: 0.2ms | ActiveRecord: 5.9ms | Allocations: 9865)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:57:00 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 24ms (Views: 0.2ms | ActiveRecord: 5.5ms | Allocations: 9823)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:57:02 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 1425)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 22:57:04 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1385)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-12 22:57:08 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms | Allocations: 1035)
+
+
+Started GET "/users/1/todos/1" for ::1 at 2021-09-12 22:57:12 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms | Allocations: 781)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=1):
+  
+app/controllers/todos_controller.rb:7:in `show'
+Started GET "/users/1/todos/2" for ::1 at 2021-09-12 22:57:17 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.3ms | Allocations: 563)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=2):
+  
+app/controllers/todos_controller.rb:7:in `show'
+Started GET "/users/1/todos/3" for ::1 at 2021-09-12 22:57:18 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"3"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 562)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=3):
+  
+app/controllers/todos_controller.rb:7:in `show'
+Started GET "/users/1/todos/4" for ::1 at 2021-09-12 22:57:20 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"4"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms | Allocations: 563)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=4):
+  
+app/controllers/todos_controller.rb:7:in `show'
+Started GET "/users/1/" for ::1 at 2021-09-12 22:57:23 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1411)
+
+
+Started GET "/users/1/todos/9" for ::1 at 2021-09-12 22:57:28 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"9"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 3634)
+
+
+  
+NoMethodError (undefined method `todos' for #<Todo id: 9, title: "monstera", url: "monstera url", created_at: "2021-09-13 05:39:44.343153000 +0000", updated_at: "2021-09-13 05:39:44.343153000 +0000", user_id: 1>):
+  
+app/controllers/todos_controller.rb:9:in `show'
+Started GET "/users/1/todos/9/" for ::1 at 2021-09-12 22:57:42 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"9"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.3ms | Allocations: 3428)
+
+
+  
+NoMethodError (undefined method `todos' for #<Todo id: 9, title: "monstera", url: "monstera url", created_at: "2021-09-13 05:39:44.343153000 +0000", updated_at: "2021-09-13 05:39:44.343153000 +0000", user_id: 1>):
+  
+app/controllers/todos_controller.rb:9:in `show'
+Started GET "/users/1/todos/9" for ::1 at 2021-09-12 22:57:52 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"9"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms | Allocations: 3429)
+
+
+  
+NoMethodError (undefined method `todos' for #<Todo id: 9, title: "monstera", url: "monstera url", created_at: "2021-09-13 05:39:44.343153000 +0000", updated_at: "2021-09-13 05:39:44.343153000 +0000", user_id: 1>):
+  
+app/controllers/todos_controller.rb:9:in `show'
+Started GET "/users/1/todos" for ::1 at 2021-09-12 22:57:57 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 782)
+
+
+Started GET "/users/1/todos/9" for ::1 at 2021-09-12 22:58:01 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"9"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms | Allocations: 3429)
+
+
+  
+NoMethodError (undefined method `todos' for #<Todo id: 9, title: "monstera", url: "monstera url", created_at: "2021-09-13 05:39:44.343153000 +0000", updated_at: "2021-09-13 05:39:44.343153000 +0000", user_id: 1>):
+  
+app/controllers/todos_controller.rb:9:in `show'
+Started GET "/users/1/todos/9" for ::1 at 2021-09-12 22:58:36 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"9"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms | Allocations: 3429)
+
+
+  
+NoMethodError (undefined method `todos' for #<Todo id: 9, title: "monstera", url: "monstera url", created_at: "2021-09-13 05:39:44.343153000 +0000", updated_at: "2021-09-13 05:39:44.343153000 +0000", user_id: 1>):
+  
+app/controllers/todos_controller.rb:9:in `show'
+Started DELETE "/users/1/todos/9" for ::1 at 2021-09-12 22:58:42 -0700
+Processing by TodosController#destroy as */*
+  Parameters: {"user_id"=>"1", "id"=>"9"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:22:in `destroy'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:22:in `destroy'
+  [1m[36mTodo Destroy (0.7ms)[0m  [1m[31mDELETE FROM "todos" WHERE "todos"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/todos_controller.rb:22:in `destroy'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:22:in `destroy'
+Completed 200 OK in 7ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 2123)
+
+
+Started DELETE "/users/1/" for ::1 at 2021-09-12 22:59:37 -0700
+  
+ActionController::RoutingError (No route matches [DELETE] "/users/1"):
+  
+Started GET "/users/1/" for ::1 at 2021-09-12 22:59:46 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 19ms (Views: 0.2ms | ActiveRecord: 4.1ms | Allocations: 7422)
+
+
+Started GET "/users/1/todos?todo[title]=Monstera&todo[img]=img" for ::1 at 2021-09-12 23:00:37 -0700
+Processing by TodosController#index as */*
+  Parameters: {"todo"=>{"title"=>"Monstera", "img"=>"img"}, "user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.2ms | Allocations: 2194)
+
+
+Started POST "/users/1/todos?todo[title]=Monstera&todo[img]=img" for ::1 at 2021-09-12 23:00:48 -0700
+Processing by TodosController#create as */*
+  Parameters: {"todo"=>{"title"=>"Monstera", "img"=>"img"}, "user_id"=>"1"}
+[31mUnpermitted parameter: :img[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:14:in `create'
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:14:in `create'
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Monstera"], ["created_at", "2021-09-13 06:00:48.470815"], ["updated_at", "2021-09-13 06:00:48.470815"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:14:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:14:in `create'
+Completed 201 Created in 27ms (Views: 0.4ms | ActiveRecord: 7.0ms | Allocations: 10292)
+
+
+Started GET "/users/1/todos?todo[title]=Monstera&todo[img]=img" for ::1 at 2021-09-12 23:00:56 -0700
+Processing by TodosController#index as */*
+  Parameters: {"todo"=>{"title"=>"Monstera", "img"=>"img"}, "user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 804)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-12 23:00:59 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms | Allocations: 777)
+
+
+Started GET "/users/1/todos/10" for ::1 at 2021-09-12 23:01:03 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"10"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 802)
+
+
+Started GET "/users/1" for ::1 at 2021-09-12 23:01:08 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 10]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 13ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 4558)
+
+
+Started GET "/users/1/todo/10" for ::1 at 2021-09-12 23:05:55 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/todo/10"):
+  
+Started GET "/users/1/todos/10" for ::1 at 2021-09-12 23:06:00 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"10"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 200 OK in 12ms (Views: 0.5ms | ActiveRecord: 2.5ms | Allocations: 5190)
+
+
+Started GET "/users/1/todos/10/plants" for ::1 at 2021-09-12 23:06:06 -0700
+Processing by PlantsController#index as */*
+  Parameters: {"user_id"=>"1", "todo_id"=>"10"}
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants"[0m
+  ↳ app/controllers/plants_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 0.4ms | Allocations: 1463)
+
+
+Started POST "/users/1/todos/10/plants?plant[water]=true&plant[fertilize]=false&plant[%20prune]=true&plant[repot]=true&plant[date]=date&plant[notes]=notes&plant[img]=img" for ::1 at 2021-09-12 23:08:22 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"water"=>"true", "fertilize"=>"false", " prune"=>"true", "repot"=>"true", "date"=>"date", "notes"=>"notes", "img"=>"img"}, "user_id"=>"1", "todo_id"=>"10"}
+[31mUnpermitted parameters: : prune, :date[0m
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 2.5ms | Allocations: 7982)
+
+
+  
+NameError (undefined local variable or method `plant' for #<PlantsController:0x0000000000eab0>
+Did you mean?  @plant):
+  
+app/controllers/plants_controller.rb:28:in `create'
+Started POST "/users/1/todos/10/plants?plant[water]=true&plant[fertilize]=false&plant[%20prune]=true&plant[repot]=true&plant[date]=date&plant[notes]=notes&plant[img]=img" for ::1 at 2021-09-12 23:09:24 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"water"=>"true", "fertilize"=>"false", " prune"=>"true", "repot"=>"true", "date"=>"date", "notes"=>"notes", "img"=>"img"}, "user_id"=>"1", "todo_id"=>"10"}
+[31mUnpermitted parameters: : prune, :date[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mPlant Create (1.8ms)[0m  [1m[32mINSERT INTO "plants" ("water", "fertilize", "repot", "notes", "img", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["water", true], ["fertilize", false], ["repot", true], ["notes", "notes"], ["img", "img"], ["created_at", "2021-09-13 06:09:24.326912"], ["updated_at", "2021-09-13 06:09:24.326912"], ["todo_id", 10]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+Completed 201 Created in 40ms (Views: 0.5ms | ActiveRecord: 9.2ms | Allocations: 13244)
+
+
+Started POST "/users/1/todos/10/plants?plant[water]=true&plant[fertilize]=false&plant[%20prune]=true&plant[repot]=true&plant[date]=date&plant[notes]=notes&plant[img]=img" for ::1 at 2021-09-12 23:09:28 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"water"=>"true", "fertilize"=>"false", " prune"=>"true", "repot"=>"true", "date"=>"date", "notes"=>"notes", "img"=>"img"}, "user_id"=>"1", "todo_id"=>"10"}
+[31mUnpermitted parameters: : prune, :date[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("water", "fertilize", "repot", "notes", "img", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["water", true], ["fertilize", false], ["repot", true], ["notes", "notes"], ["img", "img"], ["created_at", "2021-09-13 06:09:28.067295"], ["updated_at", "2021-09-13 06:09:28.067295"], ["todo_id", 10]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 0.9ms | Allocations: 2938)
+
+
+Started POST "/users/1/todos/10/plants?plant[water]=true&plant[fertilize]=false&plant[%20prune]=true&plant[repot]=true&plant[date]=date&plant[notes]=notes&plant[img]=img" for ::1 at 2021-09-12 23:09:28 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"water"=>"true", "fertilize"=>"false", " prune"=>"true", "repot"=>"true", "date"=>"date", "notes"=>"notes", "img"=>"img"}, "user_id"=>"1", "todo_id"=>"10"}
+[31mUnpermitted parameters: : prune, :date[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mPlant Create (0.6ms)[0m  [1m[32mINSERT INTO "plants" ("water", "fertilize", "repot", "notes", "img", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["water", true], ["fertilize", false], ["repot", true], ["notes", "notes"], ["img", "img"], ["created_at", "2021-09-13 06:09:28.759143"], ["updated_at", "2021-09-13 06:09:28.759143"], ["todo_id", 10]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+Completed 201 Created in 12ms (Views: 0.4ms | ActiveRecord: 2.0ms | Allocations: 2914)
+
+
+Started POST "/users/1/todos/10/plants?plant[water]=true&plant[fertilize]=false&plant[%20prune]=true&plant[repot]=true&plant[date]=date&plant[notes]=notes&plant[img]=img" for ::1 at 2021-09-12 23:09:29 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"water"=>"true", "fertilize"=>"false", " prune"=>"true", "repot"=>"true", "date"=>"date", "notes"=>"notes", "img"=>"img"}, "user_id"=>"1", "todo_id"=>"10"}
+[31mUnpermitted parameters: : prune, :date[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mPlant Create (0.2ms)[0m  [1m[32mINSERT INTO "plants" ("water", "fertilize", "repot", "notes", "img", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["water", true], ["fertilize", false], ["repot", true], ["notes", "notes"], ["img", "img"], ["created_at", "2021-09-13 06:09:29.435863"], ["updated_at", "2021-09-13 06:09:29.435863"], ["todo_id", 10]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+Completed 201 Created in 7ms (Views: 0.7ms | ActiveRecord: 1.0ms | Allocations: 2914)
+
+
+Started POST "/users/1/todos/10/plants?plant[water]=true&plant[fertilize]=false&plant[%20prune]=true&plant[repot]=true&plant[date]=date&plant[notes]=notes&plant[img]=img" for ::1 at 2021-09-12 23:09:29 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"water"=>"true", "fertilize"=>"false", " prune"=>"true", "repot"=>"true", "date"=>"date", "notes"=>"notes", "img"=>"img"}, "user_id"=>"1", "todo_id"=>"10"}
+[31mUnpermitted parameters: : prune, :date[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mPlant Create (0.8ms)[0m  [1m[32mINSERT INTO "plants" ("water", "fertilize", "repot", "notes", "img", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["water", true], ["fertilize", false], ["repot", true], ["notes", "notes"], ["img", "img"], ["created_at", "2021-09-13 06:09:30.007444"], ["updated_at", "2021-09-13 06:09:30.007444"], ["todo_id", 10]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+Completed 201 Created in 13ms (Views: 0.8ms | ActiveRecord: 2.2ms | Allocations: 2913)
+
+
+Started POST "/users/1/todos/10/plants?plant[water]=true&plant[fertilize]=false&plant[%20prune]=true&plant[repot]=true&plant[date]=date&plant[notes]=notes&plant[img]=img" for ::1 at 2021-09-12 23:09:30 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"water"=>"true", "fertilize"=>"false", " prune"=>"true", "repot"=>"true", "date"=>"date", "notes"=>"notes", "img"=>"img"}, "user_id"=>"1", "todo_id"=>"10"}
+[31mUnpermitted parameters: : prune, :date[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mPlant Create (0.4ms)[0m  [1m[32mINSERT INTO "plants" ("water", "fertilize", "repot", "notes", "img", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["water", true], ["fertilize", false], ["repot", true], ["notes", "notes"], ["img", "img"], ["created_at", "2021-09-13 06:09:30.610160"], ["updated_at", "2021-09-13 06:09:30.610160"], ["todo_id", 10]]
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:28:in `create'
+Completed 201 Created in 10ms (Views: 0.4ms | ActiveRecord: 1.4ms | Allocations: 2911)
+
+
+Started POST "/users/1" for ::1 at 2021-09-12 23:09:37 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/1"):
+  
+Started GET "/users/1" for ::1 at 2021-09-12 23:09:44 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 10]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 21ms (Views: 0.2ms | ActiveRecord: 4.1ms | Allocations: 7300)
+
+

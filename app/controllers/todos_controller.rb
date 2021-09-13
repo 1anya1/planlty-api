@@ -22,8 +22,6 @@ class TodosController < ApplicationController
         @todo = Todo.destroy(params[:id])
         render json: 204
     end
- 
-
 
     private
     def todo_params
