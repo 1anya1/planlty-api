@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  water: false
+  fertilize: false
+  prune: false
+  repot: false
+  notes: MyString
+  img: MyString
+
+two:
+  water: false
+  fertilize: false
+  prune: false
+  repot: false
+  notes: MyString
+  img: MyString

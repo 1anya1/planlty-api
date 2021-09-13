@@ -19,7 +19,7 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
         todos = @user.todos
            if @user 
-                render json:  @user.to_json(include: :todos)
+                render json:  @user.to_json(include: {todos:{include: :plants}})
            else
               render json: {
               status: 500,
