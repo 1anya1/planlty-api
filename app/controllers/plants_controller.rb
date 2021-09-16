@@ -41,7 +41,8 @@ class PlantsController < ApplicationController
 
   # DELETE /plants/1
   def destroy
-    @plant.destroy
+    @plant = @plant.destroy(params[:id])
+    render json: 204
     
   end
 
