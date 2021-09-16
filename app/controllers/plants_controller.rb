@@ -7,7 +7,7 @@ class PlantsController < ApplicationController
 
   def show
     @plant = Plant.find(params[:id])
-    @todo.todo_id = params[:todo_id]
+    # @todo.todo_id = params[:todo_id]
     render json: @plant
   end
 
