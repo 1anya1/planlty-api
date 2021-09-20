@@ -80054,3 +80054,53 @@ Processing by UsersController#index as */*
 Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 895)
 
 
+Started GET "/users" for ::1 at 2021-09-20 10:48:51 -0700
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as */*
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 22ms (Views: 5.5ms | ActiveRecord: 8.1ms | Allocations: 7297)
+
+
+Started GET "/users/1" for ::1 at 2021-09-20 10:48:55 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (2.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (1.9ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 10]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 53ms (Views: 0.1ms | ActiveRecord: 13.6ms | Allocations: 16865)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 10:48:58 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1020)
+
+
+Started GET "/users/1/todos/plants" for ::1 at 2021-09-20 10:49:01 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"plants"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms | Allocations: 798)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=plants):
+  
+app/controllers/todos_controller.rb:7:in `show'
+Started GET "/users/1/todos" for ::1 at 2021-09-20 10:49:05 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 791)
+
+
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "intro_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "intro_app_api_test" ENCODING = 'unicode'[0m
