@@ -1,8 +1,14 @@
 class PlantsController < ApplicationController
 
   def index
-    @plants = Plant.all
-    render json: @plants
+    if params[:todo_id]
+      @todo = Todo.find(params[:todo_id])
+      @plants = @todo.plants.all
+      render json: @plants
+    else
+      @plants = Plant.all
+      render json: @todos
+    end
   end
 
   def show

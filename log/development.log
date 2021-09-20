@@ -80104,3 +80104,1140 @@ Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.2ms | Allocations: 791)
 
   [1m[35m (0.9ms)[0m  [1m[35mCREATE DATABASE "intro_app_api_development" ENCODING = 'unicode'[0m
   [1m[35m (0.4ms)[0m  [1m[35mCREATE DATABASE "intro_app_api_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2021-09-20 11:41:59 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "intro_app_api_development" does not exist
+):
+  
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.4.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rails_same_site_cookie (0.1.8) lib/rails_same_site_cookie/middleware.rb:13:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-09-20 11:42:00 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "intro_app_api_development" does not exist
+):
+  
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.4.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rails_same_site_cookie (0.1.8) lib/rails_same_site_cookie/middleware.rb:13:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:42:08 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "intro_app_api_development" does not exist
+):
+  
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.4.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rails_same_site_cookie (0.1.8) lib/rails_same_site_cookie/middleware.rb:13:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-09-20 11:42:08 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "intro_app_api_development" does not exist
+):
+  
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.4.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rails_same_site_cookie (0.1.8) lib/rails_same_site_cookie/middleware.rb:13:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:42:18 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "intro_app_api_development" does not exist
+):
+  
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.4.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rails_same_site_cookie (0.1.8) lib/rails_same_site_cookie/middleware.rb:13:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/favicon.ico" for ::1 at 2021-09-20 11:42:18 -0700
+  
+ActiveRecord::NoDatabaseError (FATAL:  database "intro_app_api_development" does not exist
+):
+  
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:81:in `rescue in new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:77:in `new_client'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/postgresql_adapter.rb:37:in `postgresql_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `public_send'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:882:in `new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:926:in `checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:905:in `try_to_checkout_new_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:866:in `acquire_connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:588:in `checkout'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:428:in `connection'
+activerecord (6.1.4.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:1128:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:327:in `retrieve_connection'
+activerecord (6.1.4.1) lib/active_record/connection_handling.rb:283:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:611:in `connection'
+activerecord (6.1.4.1) lib/active_record/migration.rb:606:in `build_watcher'
+activerecord (6.1.4.1) lib/active_record/migration.rb:588:in `block in call'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `synchronize'
+activerecord (6.1.4.1) lib/active_record/migration.rb:587:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.1.4.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.1.4.1) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (6.1.4.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (6.1.4.1) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rails_same_site_cookie (0.1.8) lib/rails_same_site_cookie/middleware.rb:13:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.1.4.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/static.rb:24:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.1.4.1) lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.1.4.1) lib/rails/engine.rb:539:in `call'
+puma (5.4.0) lib/puma/configuration.rb:249:in `call'
+puma (5.4.0) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.4.0) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.4.0) lib/puma/request.rb:76:in `handle_request'
+puma (5.4.0) lib/puma/server.rb:440:in `process_client'
+puma (5.4.0) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (149.0ms)[0m  [1m[35mCREATE DATABASE "intro_app_api_development" ENCODING = 'unicode'[0m
+  [1m[35m (50.2ms)[0m  [1m[35mCREATE DATABASE "intro_app_api_test" ENCODING = 'unicode'[0m
+  [1m[35m (18.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_try_advisory_lock(6577983283399664955)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTodos (20210907231932)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "todos" ("id" bigserial primary key, "title" character varying, "url" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210907231932"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateUsers (20210907232947)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "password_digest" character varying, "username" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210907232947"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddUserIdToTodos (20210907233056)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.5ms)[0m  [1m[35mALTER TABLE "todos" ADD "user_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210907233056"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreatePlants (20210913052610)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.8ms)[0m  [1m[35mCREATE TABLE "plants" ("id" bigserial primary key, "water" boolean, "fertilize" boolean, "prune" boolean, "repot" boolean, "notes" character varying, "img" character varying, "date" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210913052610"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddForeignKeyToPlants (20210913052942)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "plants" ADD "todo_id" integer[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210913052942"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (5.1ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-09-20 18:42:48.739583"], ["updated_at", "2021-09-20 18:42:48.739583"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(6577983283399664955)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:43:03 -0700
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.8ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 1.3ms | ActiveRecord: 0.8ms | Allocations: 4547)
+
+
+Started GET "/favicon.ico" for ::1 at 2021-09-20 11:43:03 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+Started GET "/users/" for ::1 at 2021-09-20 11:43:07 -0700
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.4ms | Allocations: 2193)
+
+
+Started POST "/users?user[username]=anna&user[password]=[FILTERED]" for ::1 at 2021-09-20 11:43:44 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"anna", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "anna"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["password_digest", "$2a$12$U3bgnIiVpZqY8LeuG5JeIeRpSHOcu49GgV2Q4zb3PLO8pGUSPJYny"], ["username", "anna"], ["created_at", "2021-09-20 18:43:44.719477"], ["updated_at", "2021-09-20 18:43:44.719477"]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 209ms (Views: 0.3ms | ActiveRecord: 4.3ms | Allocations: 7180)
+
+
+Started POST "/users?user[username]=dante&user[password]=[FILTERED]" for ::1 at 2021-09-20 11:43:48 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"dante", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "dante"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["password_digest", "$2a$12$yqQNr0E98X4toOmSXYzYr.PrBmn4z4Wn0/1JTljHnQmtZ/wCJpsMu"], ["username", "dante"], ["created_at", "2021-09-20 18:43:48.584037"], ["updated_at", "2021-09-20 18:43:48.584037"]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 212ms (Views: 0.3ms | ActiveRecord: 1.1ms | Allocations: 2881)
+
+
+Started POST "/users?user[username]=luna&user[password]=[FILTERED]" for ::1 at 2021-09-20 11:43:52 -0700
+Processing by UsersController#create as */*
+  Parameters: {"user"=>{"username"=>"luna", "password"=>"[FILTERED]"}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "luna"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("password_digest", "username", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["password_digest", "$2a$12$TBF8UQFOEpJqauBwPCNmGeRZwia57ABb/PDivYjnA1XWo2XEtOFSG"], ["username", "luna"], ["created_at", "2021-09-20 18:43:53.098363"], ["updated_at", "2021-09-20 18:43:53.098363"]]
+  ↳ app/controllers/users_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:33:in `create'
+Completed 200 OK in 204ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2815)
+
+
+Started POST "/users/2/todos?todo[date]=morning" for ::1 at 2021-09-20 11:44:15 -0700
+Processing by TodosController#create as */*
+  Parameters: {"todo"=>{"date"=>"morning"}, "user_id"=>"2"}
+[31mUnpermitted parameter: :date[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2021-09-20 18:44:15.186403"], ["updated_at", "2021-09-20 18:44:15.186403"], ["user_id", 2]]
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+Completed 201 Created in 25ms (Views: 1.1ms | ActiveRecord: 4.8ms | Allocations: 8007)
+
+
+Started POST "/users/1/todos?todo[date]=12/12/12" for ::1 at 2021-09-20 11:44:32 -0700
+Processing by TodosController#create as */*
+  Parameters: {"todo"=>{"date"=>"12/12/12"}, "user_id"=>"1"}
+[31mUnpermitted parameter: :date[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2021-09-20 18:44:32.045267"], ["updated_at", "2021-09-20 18:44:32.045267"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:15:in `create'
+Completed 201 Created in 7ms (Views: 0.3ms | ActiveRecord: 1.2ms | Allocations: 2847)
+
+
+Started POST "/users/1/todos" for ::1 at 2021-09-20 11:44:47 -0700
+Processing by TodosController#create as */*
+  Parameters: {"user_id"=>"1"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 222)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: todo
+Did you mean?  action
+               controller
+               user_id):
+  
+app/controllers/todos_controller.rb:29:in `todo_params'
+app/controllers/todos_controller.rb:13:in `create'
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:44:52 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 906)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:45:23 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 856)
+
+
+Started GET "/users/1/" for ::1 at 2021-09-20 11:45:31 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 2.8ms | Allocations: 6628)
+
+
+Started GET "/users/1/" for ::1 at 2021-09-20 11:45:50 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.4ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 29ms (Views: 0.2ms | ActiveRecord: 6.6ms | Allocations: 12244)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:45:53 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.2ms | Allocations: 1097)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:46:03 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 13ms (Views: 6.6ms | ActiveRecord: 3.6ms | Allocations: 5165)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:46:04 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 859)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:46:12 -0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 19ms (Views: 8.0ms | ActiveRecord: 3.4ms | Allocations: 7958)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:46:27 -0700
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 12.5ms | ActiveRecord: 4.5ms | Allocations: 7956)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:47:08 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1980)
+
+
+  
+NoMethodError (undefined method `user_id=' for nil:NilClass):
+  
+app/controllers/todos_controller.rb:4:in `index'
+Started GET "/users/2/todos" for ::1 at 2021-09-20 11:47:41 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms | Allocations: 580)
+
+
+  
+NoMethodError (undefined method `user_id=' for nil:NilClass):
+  
+app/controllers/todos_controller.rb:4:in `index'
+Started GET "/users/2/todos" for ::1 at 2021-09-20 11:49:25 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:3:in `index'
+Completed 200 OK in 13ms (Views: 0.4ms | ActiveRecord: 2.7ms | Allocations: 5800)
+
+
+Started GET "/users/2/todos/2" for ::1 at 2021-09-20 11:49:32 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 703)
+
+
+Started GET "/users/2/todos/1" for ::1 at 2021-09-20 11:49:36 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 663)
+
+
+Started GET "/users/2/todos/2" for ::1 at 2021-09-20 11:49:38 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"2"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 654)
+
+
+Started GET "/users/2/todos/1" for ::1 at 2021-09-20 11:49:41 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 671)
+
+
+Started GET "/users/2/todos/2" for ::1 at 2021-09-20 11:49:42 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 654)
+
+
+Started GET "/users/1/todos/2" for ::1 at 2021-09-20 11:49:45 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:7:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 656)
+
+
+Started GET "/users/" for ::1 at 2021-09-20 11:49:52 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 2.4ms | Allocations: 4837)
+
+
+Started GET "/users" for ::1 at 2021-09-20 11:49:57 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.2ms | Allocations: 990)
+
+
+Started GET "/users/1" for ::1 at 2021-09-20 11:50:02 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 1.7ms | Allocations: 8181)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:50:10 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:3:in `index'
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.1ms | Allocations: 682)
+
+
+Started GET "/users/2/todos" for ::1 at 2021-09-20 11:50:15 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:3:in `index'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 653)
+
+
+Started GET "/users/3/todos" for ::1 at 2021-09-20 11:50:17 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"3"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:3:in `index'
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms | Allocations: 583)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=3):
+  
+app/controllers/todos_controller.rb:3:in `index'
+Started GET "/users" for ::1 at 2021-09-20 11:50:25 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms | Allocations: 992)
+
+
+Started GET "/users/3" for ::1 at 2021-09-20 11:50:29 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1286)
+
+
+Started GET "/users/3/todos" for ::1 at 2021-09-20 11:50:32 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"3"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:3:in `index'
+Completed 404 Not Found in 9ms (ActiveRecord: 0.2ms | Allocations: 563)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=3):
+  
+app/controllers/todos_controller.rb:3:in `index'
+Started GET "/users/3/todos" for ::1 at 2021-09-20 11:51:14 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"3"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 404 Not Found in 8ms (ActiveRecord: 2.6ms | Allocations: 2697)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=3):
+  
+app/controllers/todos_controller.rb:4:in `index'
+Started GET "/users" for ::1 at 2021-09-20 11:51:27 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 14ms (Views: 7.2ms | ActiveRecord: 3.4ms | Allocations: 4712)
+
+
+Started GET "/users/1" for ::1 at 2021-09-20 11:51:31 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 6634)
+
+
+Started GET "/users/1/toos" for ::1 at 2021-09-20 11:51:44 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/1/toos"):
+  
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:51:46 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 694)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:52:21 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+Completed 404 Not Found in 4ms (ActiveRecord: 1.4ms | Allocations: 1654)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo without an ID):
+  
+app/controllers/todos_controller.rb:3:in `index'
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:52:51 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms | Allocations: 7001)
+
+
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `user_id=' for #<ActiveRecord::Relation [#<Todo id: 1, title: nil, url: nil, created_at: "2021-09-20 18:44:15.186403000 +0000", updated_at: "2021-09-20 18:44:15.186403000 +0000", user_id: 2>, #<Todo id: 2, title: nil, url: nil, created_at: "2021-09-20 18:44:32.045267000 +0000", updated_at: "2021-09-20 18:44:32.045267000 +0000", user_id: 1>]>):
+  
+app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:52:53 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2625)
+
+
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `user_id=' for #<ActiveRecord::Relation [#<Todo id: 1, title: nil, url: nil, created_at: "2021-09-20 18:44:15.186403000 +0000", updated_at: "2021-09-20 18:44:15.186403000 +0000", user_id: 2>, #<Todo id: 2, title: nil, url: nil, created_at: "2021-09-20 18:44:32.045267000 +0000", updated_at: "2021-09-20 18:44:32.045267000 +0000", user_id: 1>]>):
+  
+app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:53:31 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1906)
+
+
+  
+NoMethodError (undefined method `user_id=' for nil:NilClass):
+  
+app/controllers/todos_controller.rb:4:in `index'
+Started GET "/users/1/todos" for ::1 at 2021-09-20 11:53:47 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms | Allocations: 6975)
+
+
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `user_id=' for #<ActiveRecord::Relation [#<Todo id: 1, title: nil, url: nil, created_at: "2021-09-20 18:44:15.186403000 +0000", updated_at: "2021-09-20 18:44:15.186403000 +0000", user_id: 2>, #<Todo id: 2, title: nil, url: nil, created_at: "2021-09-20 18:44:32.045267000 +0000", updated_at: "2021-09-20 18:44:32.045267000 +0000", user_id: 1>]>):
+  
+app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/1/todos" for ::1 at 2021-09-20 12:00:15 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 14ms (Allocations: 4841)
+
+
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `user_id=' for #<ActiveRecord::Relation [#<Todo id: 1, title: nil, url: nil, created_at: "2021-09-20 18:44:15.186403000 +0000", updated_at: "2021-09-20 18:44:15.186403000 +0000", user_id: 2>, #<Todo id: 2, title: nil, url: nil, created_at: "2021-09-20 18:44:32.045267000 +0000", updated_at: "2021-09-20 18:44:32.045267000 +0000", user_id: 1>]>):
+  
+app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/2/todos" for ::1 at 2021-09-20 12:01:18 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2622)
+
+
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `user_id=' for #<ActiveRecord::Relation [#<Todo id: 1, title: nil, url: nil, created_at: "2021-09-20 18:44:15.186403000 +0000", updated_at: "2021-09-20 18:44:15.186403000 +0000", user_id: 2>, #<Todo id: 2, title: nil, url: nil, created_at: "2021-09-20 18:44:32.045267000 +0000", updated_at: "2021-09-20 18:44:32.045267000 +0000", user_id: 1>]>):
+  
+app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/2/todos/2" for ::1 at 2021-09-20 12:01:24 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:8:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 884)
+
+
+Started GET "/users/2/todos/1" for ::1 at 2021-09-20 12:01:27 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:8:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 654)
+
+
+Started GET "/users/2/todos/" for ::1 at 2021-09-20 12:01:31 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 2622)
+
+
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `user_id=' for #<ActiveRecord::Relation [#<Todo id: 1, title: nil, url: nil, created_at: "2021-09-20 18:44:15.186403000 +0000", updated_at: "2021-09-20 18:44:15.186403000 +0000", user_id: 2>, #<Todo id: 2, title: nil, url: nil, created_at: "2021-09-20 18:44:32.045267000 +0000", updated_at: "2021-09-20 18:44:32.045267000 +0000", user_id: 1>]>):
+  
+app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users" for ::1 at 2021-09-20 12:01:38 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 17ms (Views: 7.4ms | ActiveRecord: 6.1ms | Allocations: 4761)
+
+
+Started GET "/users/" for ::1 at 2021-09-20 12:01:41 -0700
+Processing by UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:5:in `index'
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.2ms | Allocations: 990)
+
+
+Started GET "/users/1" for ::1 at 2021-09-20 12:01:42 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 15ms (Views: 0.2ms | ActiveRecord: 3.1ms | Allocations: 4486)
+
+
+Started GET "/users/2" for ::1 at 2021-09-20 12:01:47 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 6ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 2085)
+
+
+Started GET "/users/2/todoa" for ::1 at 2021-09-20 12:01:56 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/todoa"):
+  
+Started GET "/users/2/todos" for ::1 at 2021-09-20 12:01:58 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2653)
+
+
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+  
+NoMethodError (undefined method `user_id=' for #<ActiveRecord::Relation [#<Todo id: 1, title: nil, url: nil, created_at: "2021-09-20 18:44:15.186403000 +0000", updated_at: "2021-09-20 18:44:15.186403000 +0000", user_id: 2>, #<Todo id: 2, title: nil, url: nil, created_at: "2021-09-20 18:44:32.045267000 +0000", updated_at: "2021-09-20 18:44:32.045267000 +0000", user_id: 1>]>):
+  
+app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mCACHE Todo Load (0.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" /* loading for inspect */ LIMIT $1[0m  [["LIMIT", 11]]
+Started GET "/users/2/todo" for ::1 at 2021-09-20 12:02:04 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/todo"):
+  
+Started GET "/users/2/togos" for ::1 at 2021-09-20 12:02:35 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/users/2/togos"):
+  
+Started GET "/users/2/todos" for ::1 at 2021-09-20 12:02:37 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:3:in `index'
+Completed 200 OK in 15ms (Views: 0.4ms | ActiveRecord: 4.2ms | Allocations: 5117)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 12:02:50 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:3:in `index'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 656)
+
+
+Started GET "/users/1/todos" for ::1 at 2021-09-20 12:38:42 -0700
+  
+SyntaxError (/Users/annafilatova/Desktop/intro_app_api/app/controllers/todos_controller.rb:39: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/todos_controller.rb:39: syntax error, unexpected `end', expecting end-of-input
+app/controllers/todos_controller.rb:39: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/1/todos" for ::1 at 2021-09-20 12:38:45 -0700
+  
+SyntaxError (/Users/annafilatova/Desktop/intro_app_api/app/controllers/todos_controller.rb:39: syntax error, unexpected `end', expecting end-of-input):
+  
+app/controllers/todos_controller.rb:39: syntax error, unexpected `end', expecting end-of-input
+app/controllers/todos_controller.rb:39: syntax error, unexpected `end', expecting end-of-input
+Started GET "/users/1/todos" for ::1 at 2021-09-20 12:39:00 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:6:in `index'
+Completed 200 OK in 33ms (Views: 6.0ms | ActiveRecord: 9.8ms | Allocations: 11822)
+
+
+Started GET "/users/2/todos" for ::1 at 2021-09-20 12:39:06 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/todos_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1384)
+
+
+Started GET "/users/2" for ::1 at 2021-09-20 12:39:17 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 12ms (Views: 0.1ms | ActiveRecord: 2.2ms | Allocations: 4267)
+
+
+Started POST "/users/2/todos?todo[date]=12/12/12" for ::1 at 2021-09-20 12:39:31 -0700
+Processing by TodosController#create as */*
+  Parameters: {"todo"=>{"date"=>"12/12/12"}, "user_id"=>"2"}
+[31mUnpermitted parameter: :date[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("created_at", "updated_at", "user_id") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2021-09-20 19:39:31.306558"], ["updated_at", "2021-09-20 19:39:31.306558"], ["user_id", 2]]
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:21:in `create'
+Completed 201 Created in 9ms (Views: 0.5ms | ActiveRecord: 1.5ms | Allocations: 3976)
+
+
+Started POST "/users/2/todos" for ::1 at 2021-09-20 12:39:38 -0700
+Processing by TodosController#create as */*
+  Parameters: {"user_id"=>"2"}
+Completed 400 Bad Request in 0ms (ActiveRecord: 0.0ms | Allocations: 204)
+
+
+  
+ActionController::ParameterMissing (param is missing or the value is empty: todo
+Did you mean?  action
+               controller
+               user_id):
+  
+app/controllers/todos_controller.rb:35:in `todo_params'
+app/controllers/todos_controller.rb:19:in `create'
+Started GET "/users/2/todos" for ::1 at 2021-09-20 12:39:44 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/todos_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1462)
+
+
+Started GET "/users/2/" for ::1 at 2021-09-20 12:42:12 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 36ms (Views: 0.2ms | ActiveRecord: 7.5ms | Allocations: 12955)
+
+
+Started GET "/users/2/todos" for ::1 at 2021-09-20 12:42:18 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/todos_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 1775)
+
+
+Started GET "/users/2/todos/1" for ::1 at 2021-09-20 12:42:21 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13:in `show'
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 814)
+
+
+Started POST "/users/2/todos/1/plants?plant[date]=122222" for ::1 at 2021-09-20 12:42:43 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"date"=>"122222"}, "user_id"=>"2", "todo_id"=>"1"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+  [1m[36mPlant Create (0.5ms)[0m  [1m[32mINSERT INTO "plants" ("date", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "122222"], ["created_at", "2021-09-20 19:42:43.151969"], ["updated_at", "2021-09-20 19:42:43.151969"], ["todo_id", 1]]
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+Completed 201 Created in 14ms (Views: 0.3ms | ActiveRecord: 2.3ms | Allocations: 7867)
+
+
+Started POST "/users/2/todos/1/plants?plant[date]=122222" for ::1 at 2021-09-20 12:42:45 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"date"=>"122222"}, "user_id"=>"2", "todo_id"=>"1"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("date", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "122222"], ["created_at", "2021-09-20 19:42:45.587385"], ["updated_at", "2021-09-20 19:42:45.587385"], ["todo_id", 1]]
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+Completed 201 Created in 7ms (Views: 0.4ms | ActiveRecord: 1.2ms | Allocations: 2821)
+
+
+Started POST "/users/2/todos/1/plants?plant[date]=122222" for ::1 at 2021-09-20 12:42:47 -0700
+Processing by PlantsController#create as */*
+  Parameters: {"plant"=>{"date"=>"122222"}, "user_id"=>"2", "todo_id"=>"1"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+  [1m[36mPlant Create (0.3ms)[0m  [1m[32mINSERT INTO "plants" ("date", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["date", "122222"], ["created_at", "2021-09-20 19:42:47.287327"], ["updated_at", "2021-09-20 19:42:47.287327"], ["todo_id", 1]]
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:33:in `create'
+Completed 201 Created in 8ms (Views: 0.5ms | ActiveRecord: 1.3ms | Allocations: 2824)
+
+
+Started POST "/users/2" for ::1 at 2021-09-20 12:42:59 -0700
+  
+ActionController::RoutingError (No route matches [POST] "/users/2"):
+  
+Started GET "/users/2" for ::1 at 2021-09-20 12:43:03 -0700
+Processing by UsersController#show as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.4ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 3]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 9ms (Views: 0.2ms | ActiveRecord: 1.0ms | Allocations: 3201)
+
+
+Started GET "/users/2/todos/1" for ::1 at 2021-09-20 12:43:24 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"1"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13:in `show'
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 655)
+
+
+Started GET "/users/2/todos/1/plants" for ::1 at 2021-09-20 12:43:27 -0700
+Processing by PlantsController#index as */*
+  Parameters: {"user_id"=>"2", "todo_id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:5:in `index'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/plants_controller.rb:7:in `index'
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.6ms | Allocations: 1715)
+
+

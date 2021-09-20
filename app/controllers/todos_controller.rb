@@ -1,11 +1,18 @@
 class TodosController < ApplicationController
     def index
-        @todos = Todo.all
-        render json: @todos
+        if params[:user_id]
+            @user = User.find(params[:user_id])
+            @todos = @user.todos.all
+            render json: @todos
+          else
+            @todos = Todo.all
+            render json: @todos
+        end
     end
     def show
         @todo = Todo.find(params[:id])
         @todo.user_id = params[:user_id]
+        
         render json: @todo
     end
     def create
