@@ -15,6 +15,10 @@ class TodosController < ApplicationController
         
         render json: @todo
     end
+    def edit
+        @todo = Todo.find(params[:id])
+        render json: @todo
+      end
     def create
         @todo = Todo.new(todo_params)
         @todo.user_id = params[:user_id]
@@ -23,6 +27,15 @@ class TodosController < ApplicationController
         else
             render json: @todo.errors, status: :unprosessable_entity
         end
+    end
+      # PATCH/PUT /todo/id
+    def update
+        @todo = Todo.find(params[:id])
+        if @todo.update(todo_params)
+            render json: @todo, status: :created
+        else
+        render :edit
+         end
     end
   
     def destroy

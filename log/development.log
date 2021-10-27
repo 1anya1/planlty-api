@@ -81937,3 +81937,167 @@ Processing by PlantsController#show as */*
 Completed 200 OK in 15ms (Views: 0.6ms | ActiveRecord: 11.5ms | Allocations: 703)
 
 
+Started GET "/users/2/todos/1" for ::1 at 2021-10-27 14:12:32 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13:in `show'
+Completed 404 Not Found in 20ms (ActiveRecord: 7.2ms | Allocations: 4699)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=1):
+  
+app/controllers/todos_controller.rb:13:in `show'
+Started GET "/users/2/todos/1" for ::1 at 2021-10-27 14:12:39 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"1"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13:in `show'
+Completed 404 Not Found in 5ms (ActiveRecord: 0.3ms | Allocations: 566)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Todo with 'id'=1):
+  
+app/controllers/todos_controller.rb:13:in `show'
+Started GET "/users/2/todos/" for ::1 at 2021-10-27 14:12:47 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/todos_controller.rb:6:in `index'
+Completed 200 OK in 31ms (Views: 6.3ms | ActiveRecord: 7.3ms | Allocations: 9009)
+
+
+Started GET "/users/2/todos" for ::1 at 2021-10-27 14:12:49 -0700
+Processing by TodosController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:4:in `index'
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/todos_controller.rb:6:in `index'
+Completed 200 OK in 9ms (Views: 2.4ms | ActiveRecord: 0.9ms | Allocations: 1383)
+
+
+Started GET "/users/2/todos/3" for ::1 at 2021-10-27 14:12:53 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13:in `show'
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.2ms | Allocations: 661)
+
+
+Started GET "/users/2/todos/3" for ::1 at 2021-10-27 14:13:19 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13:in `show'
+Completed 200 OK in 15ms (Views: 0.5ms | ActiveRecord: 3.8ms | Allocations: 5146)
+
+
+Started PUT "/users/2/todos/3" for ::1 at 2021-10-27 14:13:26 -0700
+Processing by TodosController#update as */*
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:29:in `update'
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms | Allocations: 3119)
+
+
+  
+NameError (undefined local variable or method `plant_params' for #<TodosController:0x00000000009bf0>):
+  
+app/controllers/todos_controller.rb:30:in `update'
+Started PUT "/users/2/todos/3?todo[name]=plant" for ::1 at 2021-10-27 14:13:49 -0700
+Processing by TodosController#update as */*
+  Parameters: {"todo"=>{"name"=>"plant"}, "user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (1.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:29:in `update'
+Completed 500 Internal Server Error in 42ms (ActiveRecord: 1.2ms | Allocations: 3042)
+
+
+  
+NameError (undefined local variable or method `plant_params' for #<TodosController:0x00000000009d08>):
+  
+app/controllers/todos_controller.rb:30:in `update'
+Started GET "/users/2/todos/3" for ::1 at 2021-10-27 14:14:02 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13:in `show'
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 655)
+
+
+Started PUT "/users/2/todos/3?todo[name]=plant" for ::1 at 2021-10-27 14:15:13 -0700
+Processing by TodosController#update as */*
+  Parameters: {"todo"=>{"name"=>"plant"}, "user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `update'
+[31mUnpermitted parameter: :name[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+No template found for TodosController#update, rendering head :no_content
+Completed 204 No Content in 35ms (ActiveRecord: 5.5ms | Allocations: 11908)
+
+
+Started PUT "/users/2/todos/3?todo[name]=plant" for ::1 at 2021-10-27 14:15:48 -0700
+Processing by TodosController#update as */*
+  Parameters: {"todo"=>{"name"=>"plant"}, "user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `update'
+[31mUnpermitted parameter: :name[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+Completed 201 Created in 32ms (Views: 0.8ms | ActiveRecord: 8.2ms | Allocations: 11231)
+
+
+Started PUT "/users/2/todos/3?todo[title]=plant" for ::1 at 2021-10-27 14:16:03 -0700
+Processing by TodosController#update as */*
+  Parameters: {"todo"=>{"title"=>"plant"}, "user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:32:in `update'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+  [1m[36mTodo Update (0.9ms)[0m  [1m[33mUPDATE "todos" SET "title" = $1, "updated_at" = $2 WHERE "todos"."id" = $3[0m  [["title", "plant"], ["updated_at", "2021-10-27 21:16:03.912381"], ["id", 3]]
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+Completed 201 Created in 11ms (Views: 0.6ms | ActiveRecord: 3.1ms | Allocations: 3409)
+
+
+Started GET "/users/2/todos/3" for ::1 at 2021-10-27 14:19:02 -0700
+Processing by TodosController#show as */*
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:13:in `show'
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 674)
+
+
+Started GET "/users/2/todos/3/edit" for ::1 at 2021-10-27 14:19:04 -0700
+Processing by TodosController#edit as */*
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:19:in `edit'
+No template found for TodosController#edit, rendering head :no_content
+Completed 204 No Content in 5ms (ActiveRecord: 0.1ms | Allocations: 2017)
+
+
+Started GET "/users/2/todos/3/edit" for ::1 at 2021-10-27 14:19:27 -0700
+Processing by TodosController#edit as */*
+  Parameters: {"user_id"=>"2", "id"=>"3"}
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:19:in `edit'
+Completed 200 OK in 16ms (Views: 0.5ms | ActiveRecord: 3.0ms | Allocations: 5122)
+
+
