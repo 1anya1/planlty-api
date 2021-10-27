@@ -44,6 +44,7 @@ class PlantsController < ApplicationController
     if @plant.update(plant_params)
     else
       render :edit
+      
     end
   end
 
