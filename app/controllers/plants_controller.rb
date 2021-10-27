@@ -24,6 +24,7 @@ class PlantsController < ApplicationController
 
   # GET /plants/1/edit
   def edit
+    @plant = Plant.find(params[:id])
   end
 
   # POST /plants
@@ -39,6 +40,7 @@ class PlantsController < ApplicationController
 
   # PATCH/PUT /plants/1
   def update
+    @plant = Plant.find(params[:id])
     if @plant.update(plant_params)
     else
       render :edit
