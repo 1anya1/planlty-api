@@ -30,6 +30,8 @@ class UsersController < ApplicationController
 
     def create
         @user = User.new(user_params)
+        puts "My name is #{user_params}!" 
+        puts "Params: #{params}"
         if @user.save
             login!  
             render json: {
@@ -39,7 +41,8 @@ class UsersController < ApplicationController
        else 
            render json: {
            status: 500,
-           errors: @user.errors.full_messages
+           errors:"My name is #{params} #{@user.errors.full_messages}"  
+
        }
        end
     end
