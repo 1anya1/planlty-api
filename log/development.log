@@ -83413,3 +83413,149 @@ Did you mean?  username
   
 app/controllers/sessions_controller.rb:40:in `session_params'
 app/controllers/sessions_controller.rb:3:in `create'
+Started POST "/login" for ::1 at 2025-02-03 04:23:56 -0800
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by SessionsController#create as HTML
+  Parameters: {"user"=>{"username"=>"filatovaa@yahoo.com", "email"=>"", "password"=>"[FILTERED]"}, "session"=>{"user"=>{"username"=>"filatovaa@yahoo.com", "email"=>"", "password"=>"[FILTERED]"}}}
+[31mUnpermitted parameter: :email[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "filatovaa@yahoo.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:3:in `create'
+[31mUnpermitted parameter: :email[0m
+Completed 200 OK in 274ms (Views: 0.4ms | ActiveRecord: 7.8ms | Allocations: 8597)
+
+
+Started GET "/users/4" for ::1 at 2025-02-03 04:23:56 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.9ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 24ms (Views: 0.1ms | ActiveRecord: 8.3ms | Allocations: 6218)
+
+
+Started POST "/users/4/todos" for ::1 at 2025-02-03 04:24:30 -0800
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#create as HTML
+  Parameters: {"todo"=>{"title"=>"dfsadf", "url"=>"https://plantly-user-uploads.s3.amazonaws.com/Screenshot 2025-02-03 at 12.00.06 AM.png"}, "user_id"=>"4"}
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:25:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:25:in `create'
+  [1m[36mTodo Create (52.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "url", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "dfsadf"], ["url", "https://plantly-user-uploads.s3.amazonaws.com/Screenshot 2025-02-03 at 12.00.06 AM.png"], ["created_at", "2025-02-03 12:24:31.169628"], ["updated_at", "2025-02-03 12:24:31.169628"], ["user_id", 4]]
+  ↳ app/controllers/todos_controller.rb:25:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:25:in `create'
+Completed 201 Created in 98ms (Views: 0.2ms | ActiveRecord: 82.4ms | Allocations: 14925)
+
+
+Started GET "/users/4" for ::1 at 2025-02-03 04:24:31 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (1.0ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 2.8ms | Allocations: 5767)
+
+
+Started GET "/users/4" for ::1 at 2025-02-03 04:24:34 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.1ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 7ms (Views: 0.1ms | ActiveRecord: 0.6ms | Allocations: 2124)
+
+
+Started POST "/users/4/todos/1/plants" for ::1 at 2025-02-03 04:24:41 -0800
+Processing by PlantsController#create as HTML
+  Parameters: {"plant"=>{"water"=>false, "fertilize"=>true, "prune"=>true, "repot"=>false, "notes"=>"dfasdfas", "img"=>"", "date"=>"2025-02-06"}, "user_id"=>"4", "todo_id"=>"1"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/plants_controller.rb:34:in `create'
+  [1m[36mTodo Load (0.2ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/plants_controller.rb:34:in `create'
+  [1m[36mPlant Create (1.9ms)[0m  [1m[32mINSERT INTO "plants" ("water", "fertilize", "prune", "repot", "notes", "img", "date", "created_at", "updated_at", "todo_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["water", false], ["fertilize", true], ["prune", true], ["repot", false], ["notes", "dfasdfas"], ["img", ""], ["date", "2025-02-06"], ["created_at", "2025-02-03 12:24:41.759788"], ["updated_at", "2025-02-03 12:24:41.759788"], ["todo_id", 1]]
+  ↳ app/controllers/plants_controller.rb:34:in `create'
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/plants_controller.rb:34:in `create'
+Completed 201 Created in 23ms (Views: 0.4ms | ActiveRecord: 6.0ms | Allocations: 7981)
+
+
+Started GET "/users/4" for ::1 at 2025-02-03 04:24:41 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (0.1ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.2ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 2231)
+
+
+Started GET "/users/4" for ::1 at 2025-02-03 04:24:44 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (9.0ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.3ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 9.8ms | Allocations: 2211)
+
+
+Started GET "/users/4" for ::1 at 2025-02-03 04:24:46 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (3.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.6ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 14ms (Views: 0.1ms | ActiveRecord: 5.0ms | Allocations: 2211)
+
+
+Started GET "/users/4/todos/1/edit" for ::1 at 2025-02-03 04:24:48 -0800
+Processing by TodosController#edit as HTML
+  Parameters: {"user_id"=>"4", "id"=>"1"}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:19:in `edit'
+Completed 200 OK in 8ms (Views: 0.8ms | ActiveRecord: 0.5ms | Allocations: 798)
+
+
+Started PUT "/users/4/todos/1" for ::1 at 2025-02-03 04:24:51 -0800
+Started GET "/users/4" for ::1 at 2025-02-03 04:24:51 -0800
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+Processing by TodosController#update as HTML
+  Parameters: {"todo"=>{"title"=>"dfsadfdsfsadfasfd", "url"=>"https://plantly-user-uploads.s3.amazonaws.com/Screenshot 2025-02-03 at 12.00.06 AM.png"}, "user_id"=>"4", "id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:19:in `show'
+  [1m[36mTodo Load (2.3ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."user_id" = $1[0m  [["user_id", 4]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+  [1m[36mPlant Load (0.5ms)[0m  [1m[34mSELECT "plants".* FROM "plants" WHERE "plants"."todo_id" = $1[0m  [["todo_id", 1]]
+  ↳ app/controllers/users_controller.rb:22:in `show'
+Completed 200 OK in 9ms (Views: 0.1ms | ActiveRecord: 3.6ms | Allocations: 3585)
+
+
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos" WHERE "todos"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:33:in `update'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/todos_controller.rb:34:in `update'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/todos_controller.rb:34:in `update'
+  [1m[36mTodo Update (0.7ms)[0m  [1m[33mUPDATE "todos" SET "title" = $1, "updated_at" = $2 WHERE "todos"."id" = $3[0m  [["title", "dfsadfdsfsadfasfd"], ["updated_at", "2025-02-03 12:24:51.783955"], ["id", 1]]
+  ↳ app/controllers/todos_controller.rb:34:in `update'
+  [1m[36mTRANSACTION (12.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/todos_controller.rb:34:in `update'
+Completed 201 Created in 79ms (Views: 0.3ms | ActiveRecord: 51.0ms | Allocations: 10355)
+
+

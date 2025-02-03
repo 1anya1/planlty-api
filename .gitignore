@@ -1,0 +1,55 @@
+# Ignore bundler config
+/.bundle
+
+# Ignore system-specific files
+*.swp
+*.swo
+.DS_Store
+.idea/
+.vscode/
+Thumbs.db
+
+# Ignore log files and temp files
+/log/*
+/tmp/*
+!/log/.keep
+!/tmp/.keep
+
+# Ignore database files
+/db/*.sqlite3
+/db/*.sqlite3-journal
+/db/schema.rb
+/db/seeds.rb
+
+# Ignore compiled assets
+/public/assets
+/public/packs
+/public/uploads
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+
+# Ignore Rails secret files (DO NOT COMMIT)
+config/credentials.yml.enc
+config/master.key
+
+# Ignore environment files
+.env
+.env.development
+.env.production
+.env.test
+
+# Ignore test coverage reports
+/coverage
+/simplecov
+
+# Ignore Spring process files
+/tmp/spring.log
+
+# Ignore deployment files (Heroku, Fly.io, etc.)
+/config/database.yml
+/config/storage.yml
+
+# Ignore Docker and Fly.io files (if applicable)
+docker-compose.yml
+.fly/
